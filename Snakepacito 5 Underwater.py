@@ -19,7 +19,7 @@ width = 800
 height = 600
 display = pygame.display.set_mode((width, height), pygame.RESIZABLE)
 pygame.display.set_caption("Snakepacito 5: Underwater (Deluxe Edition) (Collector's Edition) (NEW UPDATES)")
-pygame.display.set_icon(pygame.image.load("icon.png").convert_alpha())
+pygame.display.set_icon(pygame.image.load("assets/images/icon.png").convert_alpha())
 
 GRID_SIZE = 20  # Each grid is n by n pixels
 gridWidth = width/GRID_SIZE
@@ -31,11 +31,11 @@ window = "Title"
 
 # Full resolution surfaces that are not touched by scaling, so if the game window is scaled to a small
 # size then back to a large one quality doesn't deteriorate
-TITLE_BACKGROUND_MASTER = pygame.image.load("title.png").convert()
-GAME_BACKGROUND_MASTER = pygame.image.load("underwater2160.png").convert()
-TITLE_TEXT_MASTER = pygame.image.load("title text.png").convert_alpha()
-WARNING_SEGMENT_MASTER = pygame.image.load("warning.png").convert_alpha()
-LORE_BACKGROUND_MASTER = pygame.image.load("lore.png").convert()
+TITLE_BACKGROUND_MASTER = pygame.image.load("assets/images/title.png").convert()
+GAME_BACKGROUND_MASTER = pygame.image.load("assets/images/underwater2160.png").convert()
+TITLE_TEXT_MASTER = pygame.image.load("assets/images/title text.png").convert_alpha()
+WARNING_SEGMENT_MASTER = pygame.image.load("assets/images/warning.png").convert_alpha()
+LORE_BACKGROUND_MASTER = pygame.image.load("assets/images/lore.png").convert()
 
 # The actual surfaces that are drawn and scaled
 titleBackground = TITLE_BACKGROUND_MASTER.copy()
@@ -51,9 +51,9 @@ GRAY_OVERLAY = pygame.Surface((100, 100), pygame.SRCALPHA)
 GRAY_OVERLAY.fill((150, 150, 150, 100))
 
 # surfaces that never get scaled
-COIN = pygame.transform.scale(pygame.image.load("coin.png").convert_alpha(), (GRID_SIZE, GRID_SIZE))
-OBSTACLE_TEXTURES = [pygame.image.load("concrete1600.png").convert(), pygame.image.load("rocks1024.png").convert(), pygame.image.load("sharp rocks1024.png").convert()]
-WARNING_SIGN = pygame.image.load("warning sign.png").convert_alpha()
+COIN = pygame.transform.scale(pygame.image.load("assets/images/coin.png").convert_alpha(), (GRID_SIZE, GRID_SIZE))
+OBSTACLE_TEXTURES = [pygame.image.load("assets/images/concrete1600.png").convert(), pygame.image.load("assets/images/rocks1024.png").convert(), pygame.image.load("assets/images/sharp rocks1024.png").convert()]
+WARNING_SIGN = pygame.image.load("assets/images/warning sign.png").convert_alpha()
 
 # solid colour overlay surfaces
 SCORE_BACKGROUND = pygame.transform.scale(GRAY_OVERLAY, (100, 40))
@@ -62,10 +62,10 @@ TITLE_INFO_OVERLAY = pygame.transform.scale(GRAY_OVERLAY, (400, 310))
 pauseOverlay = pygame.transform.scale(GRAY_OVERLAY, (width, height))
 
 # sounds and music ######################
-deathSound = pygame.mixer.Sound("oof.wav")
-coinSound = pygame.mixer.Sound("coin.wav")
+deathSound = pygame.mixer.Sound("assets/sounds/oof.wav")
+coinSound = pygame.mixer.Sound("assets/sounds/coin.wav")
 coinSound.set_volume(0.6)
-music = pygame.mixer.music.load("toto-africa noteblock loop.ogg")
+music = pygame.mixer.music.load("assets/sounds/toto-africa noteblock loop.ogg")
 pygame.mixer.music.set_volume(0.3)
 
 # fonts #################################
